@@ -21,6 +21,7 @@ const AnecdoteForm = (props) => {
     )
 }
 
+
 export default connect(
     null,
     {createAnecdote}
