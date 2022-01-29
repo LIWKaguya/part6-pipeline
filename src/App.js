@@ -12,13 +12,13 @@ const App = (props) => {
     }, [props])
 
     return (
-        <div>   
+        <>
             <Notification />
             <h2>Anecdotes</h2>
             <Filter />
             <AnecdoteList />
             <AnecdoteForm />
-        </div>
+        </>
     )
 }
 

@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-prod": "node App.js",
+    "start-prod": "node server.js",
     "server": "json-server -p3001 --watch db.json",
     "eslint": "eslint \"**/*.{js,jsx}\"",
     "cypress:open": "cypress open",
