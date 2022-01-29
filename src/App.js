@@ -7,22 +7,22 @@ import Filter from './components/Filter'
 import { initAnecdotes } from './reducers/anecdoteReducer'
 
 const App = (props) => {   
-  useEffect(() => {
-     props.initAnecdotes()
-  }, [props])
+    useEffect(() => {
+        props.initAnecdotes()
+    }, [props])
 
-  return (
-    <div>   
-      <Notification />
-      <h2>Anecdotes</h2>
-      <Filter />
-      <AnecdoteList />
-      <AnecdoteForm />
-    </div>
-  )
+    return (
+        <div>   
+            <Notification />
+            <h2>Anecdotes</h2>
+            <Filter />
+            <AnecdoteList />
+            <AnecdoteForm />
+        </div>
+    )
 }
 
 export default connect(
-  null,
-  {initAnecdotes}
+    null,
+    {initAnecdotes}
 )(App)

@@ -10,13 +10,13 @@ const Anecdote = ({anecdote, likeAnecdote, createNotification}) => {
     }
     return (
         <div>
-          <div>
-            {anecdote.content}
-          </div>
-          <div>
-            has {anecdote.votes}
-            <button onClick={() => vote(anecdote)}>vote</button>
-          </div>
+            <div>
+                {anecdote.content}
+            </div>
+            <div>
+              has {anecdote.votes}
+                <button onClick={() => vote(anecdote)}>vote</button>
+            </div>
         </div>
     )
 }
@@ -25,10 +25,10 @@ const AnecdoteList = (props) => {
     const {likeAnecdote, createNotification} = props
     return (
         <>
-        {props.anecdotes.sort((mine, yours) => yours.votes - mine.votes) 
-        .map(anecdote =>
-            <Anecdote anecdote={anecdote} likeAnecdote={likeAnecdote} createNotification={createNotification} key={anecdote.id} />
-            )}
+            {props.anecdotes.sort((mine, yours) => yours.votes - mine.votes) 
+                .map(anecdote =>
+                    <Anecdote anecdote={anecdote} likeAnecdote={likeAnecdote} createNotification={createNotification} key={anecdote.id} />
+                )}
         </>
     )
 }
@@ -44,6 +44,6 @@ const mapDispatchToProps = {
 }
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(AnecdoteList)

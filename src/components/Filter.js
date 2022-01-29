@@ -3,22 +3,22 @@ import { filterAnec } from '../reducers/filterReducer'
 import { connect } from 'react-redux'
 
 const Filter = (props) => {
-  const handleChange = (event) => {
-    props.filterAnec(event.target.value)
-  }
+    const handleChange = (event) => {
+        props.filterAnec(event.target.value)
+    }
 
-  const style = {
-    marginBottom: 10
-  }
+    const style = {
+        marginBottom: 10
+    }
 
-  return (
-    <div style={style}>
+    return (
+        <div style={style}>
       filter <input onChange={handleChange}/>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default connect(
-  null,
-  {filterAnec}
+    null,
+    {filterAnec}
 )(Filter)

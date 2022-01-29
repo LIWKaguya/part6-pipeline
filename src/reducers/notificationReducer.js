@@ -1,11 +1,11 @@
 const initialState = ''
-let timer;
+let timer
 const notificationReducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'CREATED':
-            return action.data
-        default:
-            return state
+    case 'CREATED':
+        return action.data
+    default:
+        return state
     }
 }
 
